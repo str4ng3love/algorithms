@@ -10,12 +10,16 @@ function Linear_SearchNum(arr, x){
     return null
 }
 
-function ver(result){
-    if(!result){
+function verify(res){
+    if(!res){
         console.log('Value not found.')
     } else {
-        console.log(`Target found at index ${result}`)
+        console.log(`Target found at index ${res}`)
     }
 }
-let result = Linear_SearchNum(arr, 5)
-ver(result)
+
+let result
+result = Linear_SearchNum(arr, 5)
+verify(result)
+result  = Linear_SearchNum(arr, 54)
+verify(result)

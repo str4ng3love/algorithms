@@ -23,12 +23,15 @@ function Recursive_Binary_Search(arr, value) {
   }
 }
 
-function ver(result) {
+function verify(result) {
   if (!result) {
     console.log("Value not found.");
   } else {
     console.log(`Target found at index ${result}`);
   }
 }
-let result = Recursive_Binary_Search(sortedArr, 6);
-ver(result);
+let result
+result = Recursive_Binary_Search(sortedArr, 6);
+verify(result);
+result = Recursive_Binary_Search(sortedArr, 2126);
+verify(result)
