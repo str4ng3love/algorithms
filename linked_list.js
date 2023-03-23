@@ -110,7 +110,7 @@ class LinkedList {
       return this.explain();
     }
   }
-  erase(index) {
+  eraseByIndex(index) {
     console.log("index :", index);
 
     if (index === undefined || null) {
@@ -137,6 +137,23 @@ class LinkedList {
       beforeErased.nextNode = afterErased;
       return toBeErased;
     }
+  }
+  remove(data){
+    let current = this.head;
+    let found = false;
+    let prev;
+    while(current && !found){
+      if(current.data === data && current === this.head){
+      return  this.removeHead()
+      } else if(current.data === data){
+        found = true
+        prev.nextNode = current.nextNode
+      } else {
+        prev = current
+        current = current.nextNode
+      }
+    }
+    return current
   }
 }
 
